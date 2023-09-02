@@ -2,7 +2,21 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@soa/*": [
+        "app/*"
+      ],
+      "@soa/env/*": [
+        "environments/*"
+      ],
+      "@soa/shared/*": [
+        "app/shared/*"
+      ],
+      "@soa/core/*": [
+        "app/core/*"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

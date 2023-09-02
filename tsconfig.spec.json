@@ -2,6 +2,21 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@soa/*": [
+        "app/*"
+      ],
+      "@soa/env/*": [
+        "environments/*"
+      ],
+      "@soa/shared/*": [
+        "app/shared/*"
+      ],
+      "@soa/core/*": [
+        "app/core/*"
+      ]
+    },
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
