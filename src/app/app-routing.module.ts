@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminContainerComponent } from '@soa/shared/layout/containers';
+import { AdolescentListComponent } from './adolescent-list/adolescent-list.component';
+
+
 
 const routes: Routes = [
   {
@@ -19,7 +22,12 @@ const routes: Routes = [
       {
         path: 'adolescente',
         loadChildren: () => import('./teenager/teenager.module').then(m => m.TeenagerModule)
+      },
+      {
+        path: 'adolescent-list',
+        component: AdolescentListComponent
       }
+
     ]
   }
 ];

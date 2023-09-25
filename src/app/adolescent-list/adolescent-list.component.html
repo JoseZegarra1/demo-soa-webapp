@@ -1,0 +1,91 @@
+<div class="filter-section">
+    <label>FILTRO POR:</label>
+    <select [(ngModel)]="filterByStatus" (ngModelChange)="filterAdolescentsByStatus()">
+      <option value="A">Activos</option>
+      <option value="I">Inactivos</option>
+    </select>
+  </div>
+  
+  
+  <div class="adolescent-list">
+    <h2>Lista de Programas:</h2>
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid #ccc;">
+      <thead>
+        <tr style="background-color: #f4f4f4;">
+          <th style="padding: 8px; text-align: left;">ID</th>
+          <th style="padding: 8px; text-align: left;">NOMBRE</th>
+
+  
+  
+          <th style="padding: 8px; text-align: left;">TIPO</th>
+          <th style="padding: 8px; text-align: left;">BENEFICIARIO</th>
+          <th style="padding: 8px; text-align: left;">RESPONSABLE</th>
+          <th style="padding: 8px; text-align: left;">DESCRIPCION</th>
+          <th style="padding: 8px; text-align: left;">DURACION</th>
+          <th style="padding: 8px; text-align: left;">ACTIVO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let adolescent of adolescents">
+          <td>{{ adolescent.id }}</td>
+      <td>{{ adolescent.name }}</td>
+      <td>{{ adolescent.type }}</td>
+      <td>{{ adolescent.beneficiary }}</td>
+      <td>{{ adolescent.responsible }}</td>
+      <td>{{ adolescent.description }}</td>
+      <td>{{ adolescent.duration }}</td>
+      <td>{{ adolescent.condition }}</td>
+          <td style="padding: 8px; text-align: left;">
+            <button class="btn-edit" (click)="openEditForm(adolescent)">Editar</button>
+          </td>
+  
+          <td style="padding: 8px; text-align: left;">
+            <button class="btn-{{ isDeleteButton ? 'delete' : 'restore' }}"
+                    (click)="isDeleteButton ? deleteAdolescent(adolescent.id) : restoreAdolescent(adolescent.id)">
+              {{ isDeleteButton ? 'Eliminar' : 'Restaurar' }}
+            </button>
+          </td>
+  
+  
+  
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Formulario de edición -->
+    <div *ngIf="showEditForm" class="edit-form-overlay">
+      <div class="edit-form">
+        <h3>Editar Adolescente</h3>
+        <form>
+          <label>Nombre:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.name" name="name">
+  
+          <label>type:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.type" name="type">
+  
+          <label>beneficiary:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.beneficiary" name="beneficiary">
+  
+          <label>responsible:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.responsible" name="responsible">
+  
+          <label>description:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.description" name="description">
+  
+  
+  
+          <label>duration:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.duration" name="duration">
+  
+          <label>condition:</label>
+          <input type="text" [(ngModel)]="editedAdolescent.condition" name="condition">
+  
+          <div class="form-group">
+            <button type="button" (click)="closeEditForm()" class="btn btn-secondary">Cancelar</button>
+            <button type="button" (click)="saveEditedAdolescent()" class="btn btn-primary">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

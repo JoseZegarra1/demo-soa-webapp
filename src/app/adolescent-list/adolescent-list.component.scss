@@ -1,0 +1,160 @@
+/* Estilos generales */
+.adolescent-list {
+    max-width: 100%;
+    overflow-x: auto; /* Agregar barra de desplazamiento horizontal si es necesario */
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para los botones de editar y eliminar */
+  .btn-edit,
+  .btn-delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #fff;
+  }
+  
+  .btn-edit {
+    background-color: #007bff; /* Color azul */
+  }
+  
+  .btn-delete {
+    background-color: #dc3545; /* Color rojo */
+  }
+  
+  /* Estilos para el formulario de edición */
+  .edit-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: left;
+    margin: 20px auto; /* Centra el formulario horizontalmente */
+  }
+  
+  /* Estilos para los elementos del formulario de edición */
+  .edit-form h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .edit-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+  
+  .edit-form input[type="text"],
+  .edit-form input[type="date"],
+  .edit-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+  
+  .edit-form .form-group {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  .edit-form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .edit-form button.btn-secondary {
+    background-color: #ccc;
+    color: #fff;
+  }
+  
+  .edit-form button.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Estilos para la sección de filtro */
+  .filter-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .filter-section select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos para las opciones del select */
+  .filter-section select option {
+    font-weight: normal;
+    color: #333;
+  }
+  
+  /* Estilos para el borde al enfocar el select */
+  .filter-section select:focus {
+    outline: none;
+    border-color: #007bff; /* Color azul al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave al enfocar */
+  }
+  
+  /* Estilos para el botón "X" */
+  .close-button {
+    background-color: #dc3545; /* Color rojo */
+    color: #fff; /* Color del texto en blanco */
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+  
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: #c82333; /* Color rojo más oscuro al pasar el mouse */
+  }
+  
+  
+  /* Agrega este estilo en tu archivo CSS para darle color amarillo al botón */
+  .btn-restore {
+    background-color: #f4b709ff;
+    color: white; /* Puedes ajustar el color del texto según tus preferencias */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin:8px;
+  }
+  
+  .btn-restore:hover {
+    background-color: #ffcc00; /* Cambia el color al pasar el mouse por encima si lo deseas */
+  }
+  
